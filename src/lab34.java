@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-class Student {
+class student {
     int roll;
     String name;
     double cgpa;
 
     // Constructor to initialize student details
-    Student(int roll, String name, double cgpa) {
+    student(int roll, String name, double cgpa) {
         this.roll = roll;
         this.name = name;
         this.cgpa = cgpa;
@@ -21,7 +21,7 @@ public class lab34 {
         int n = scanner.nextInt();
         scanner.nextLine(); // Consume newline character
 
-        Student[] students = new Student[n];
+        student[] students = new student[n];
 
         // Input student details
         for (int i = 0; i < n; i++) {
@@ -37,18 +37,18 @@ public class lab34 {
             double cgpa = scanner.nextDouble();
             scanner.nextLine(); // Consume newline character
 
-            students[i] = new Student(roll, name, cgpa);
+            students[i] = new student(roll, name, cgpa);
         }
 
         // Display student details
         System.out.println("\nStudent details:");
-        for (Student student : students) {
+        for (student student : students) {
             System.out.println("Roll: " + student.roll + ", Name: " + student.name + ", CGPA: " + student.cgpa);
         }
 
         // Find the student with the lowest CGPA
-        Student lowestCgpaStudent = students[0];
-        for (Student student : students) {
+        student lowestCgpaStudent = students[0];
+        for (student student : students) {
             if (student.cgpa < lowestCgpaStudent.cgpa) {
                 lowestCgpaStudent = student;
             }
